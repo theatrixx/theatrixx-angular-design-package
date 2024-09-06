@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/EdouardTheatrixx/theatrixx-angular-design-package#readme",
   "devDependencies": {
+    "@angular/cdk": "^18.2.3",
+    "@angular/material": "^18.2.3",
     "sass": "^1.78.0"
   }
 }
