@@ -1,0 +1,27 @@
+{
+  "name": "@theatrixx123/angular-package",
+  "version": "1.0.0",
+  "description": "Angular design for theatrixx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass index.scss dist/index.css --style=compressed",
+    "watch": "sass index.scss dist/index.css --style=compressed --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdouardTheatrixx/theatrixx-angular-design-package.git"
+  },
+  "keywords": [
+    "angular-theatrixx-design"
+  ],
+  "author": "Theatrixx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdouardTheatrixx/theatrixx-angular-design-package/issues"
+  },
+  "homepage": "https://github.com/EdouardTheatrixx/theatrixx-angular-design-package#readme",
+  "devDependencies": {
+    "sass": "^1.78.0"
+  }
+}
