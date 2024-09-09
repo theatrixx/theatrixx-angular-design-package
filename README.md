@@ -3,12 +3,10 @@
 To test locally:
 `cd go/to/angular-package/`
 `npm link`
+`npm run watch`
 `cd go/to/test/folder/`
-`npm link angular-package`
+`npm link @theatrixx123/angular-package`
 
-add the link to css file :
+import the package style in your scss file (after @use "@angular/material" as mat):
 
-<link
-      rel="stylesheet"
-      href="node_modules/@theatrixx123/angular-package/dist/index.css"
-    />
+`@use "@theatrixx123/angular-package";`
