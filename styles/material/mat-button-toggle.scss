@@ -1,0 +1,60 @@
+mat-button-toggle-group {
+  &.mat-button-toggle-group-appearance-standard {
+    border-radius: 5px;
+    border: solid 2px var(--color);
+    transition: border-color $transition-time;
+    .mat-button-toggle-appearance-standard {
+      color: var(--color);
+      font-family: var(--font-family);
+      background-color: transparent;
+      font-size: var(--font-md);
+      & + .mat-button-toggle-appearance-standard {
+        border-left: solid 1px var(--color);
+        color: var(--color);
+        transition: border-color $transition-time;
+      }
+      .mat-button-toggle-label-content {
+        line-height: initial;
+        padding: 0.2rem 0.25rem;
+        font-size: var(--font-sm);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  mat-button-toggle-group {
+    &.mat-button-toggle-group-appearance-standard {
+      .mat-button-toggle-appearance-standard {
+        .mat-button-toggle-label-content {
+          padding: 0.25rem 0.5rem;
+          font-size: var(--font-sm);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $laptop) {
+  mat-button-toggle-group {
+    &.mat-button-toggle-group-appearance-standard {
+      .mat-button-toggle-appearance-standard {
+        .mat-button-toggle-label-content {
+          padding: 0.25rem 0.5rem;
+          font-size: var(--font-md);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  mat-button-toggle-group {
+    &.mat-button-toggle-group-appearance-standard {
+      .mat-button-toggle-appearance-standard {
+        .mat-button-toggle-label-content {
+          padding: 0.25rem 0.75rem;
+          font-size: var(--font-md);
+        }
+      }
+    }
+  }
+}

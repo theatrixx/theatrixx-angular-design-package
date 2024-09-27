@@ -1,0 +1,214 @@
+button.mdc-button,
+a.mdc-button {
+  @extend button;
+  height: auto;
+  vertical-align: initial;
+  .mat-mdc-button-touch-target {
+    height: 100%;
+  }
+  &[disabled] {
+    color: var(--gray);
+    border-color: var(--gray);
+    background-color: var(--background);
+  }
+  &:not(:disabled) {
+    background-color: var(--color);
+    border: solid 2px var(--color);
+    &:hover {
+      background-color: var(--background);
+      .mdc-button__label {
+        color: var(--color);
+      }
+      .mat-mdc-button-persistent-ripple,
+      .mat-ripple {
+        * {
+          display: none;
+        }
+        &::before {
+          background-color: transparent !important;
+        }
+      }
+    }
+    .mdc-button__label {
+      color: var(--background);
+      transition: color $transition-time;
+    }
+    &.mdc-button--outlined {
+      background-color: var(--background);
+      border: solid 2px var(--color);
+      .mdc-button__label {
+        color: var(--color);
+      }
+      &:hover {
+        background-color: var(--color);
+        .mdc-button__label {
+          color: var(--background);
+          transition: color $transition-time;
+        }
+      }
+    }
+    &.mdc-button--unelevated {
+      background-color: var(--primary);
+      border: solid 2px var(--primary);
+      .mdc-button__label {
+        color: var(--tertiary);
+      }
+      &:hover {
+        background-color: var(--primaryLight);
+        border-color: var(--primaryLight);
+      }
+    }
+  }
+}
+
+button.mdc-icon-button,
+button.mdc-fab,
+a.mdc-fab {
+  background-color: var(--background);
+  color: var(--color);
+  transition: background-color $transition-time, color $transition-time;
+  &.mat-mdc-button-disabled {
+    .mat-icon {
+      color: var(--gray);
+      transition: color $transition-time;
+    }
+    .mdc-button__label {
+      transition: color $transition-time;
+    }
+  }
+}
+
+.theme-dark {
+  button.mdc-fab,
+  a.mdc-fab {
+    background-color: var(--grayDark);
+    &.mat-mdc-button-disabled {
+      background-color: var(--secondaryLight);
+      transition: background-color $transition-time;
+      .mdc-button__label {
+        color: var(--gray);
+      }
+    }
+  }
+}
+
+// base buttons
+@each $color, $value in $colorsHSL {
+  button.mdc-button.btn-#{$color},
+  a.mdc-button.btn-#{$color} {
+    border-color: hsl($value);
+    background-color: var(--background);
+    .mdc-button__label,
+    mat-icon {
+      color: hsl($value);
+      transition: color $transition-time;
+    }
+    &:hover {
+      background-color: hsl($value);
+      .mdc-button__label,
+      mat-icon {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+// custom buttons
+a.mdc-button,
+button.mdc-button {
+  &.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    .mdc-button__label,
+    mat-icon {
+      color: var(--white);
+    }
+    &:hover {
+      background-color: var(--primaryLight);
+      border-color: var(--primaryLight);
+    }
+  }
+  &.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    .mdc-button__label,
+    mat-icon {
+      color: var(--white);
+    }
+    &:hover {
+      background-color: var(--secondaryLight);
+      border-color: var(--secondaryLight);
+      color: var(--white);
+    }
+  }
+  &.btn-tertiary {
+    background-color: var(--tertiary);
+    border-color: var(--color);
+    .mdc-button__label,
+    mat-icon {
+      color: var(--secondary);
+    }
+    &:hover {
+      background-color: var(--tertiary);
+      border-color: var(--color);
+      .mdc-button__label,
+      mat-icon {
+        color: var(--secondary);
+      }
+      opacity: 0.8;
+    }
+  }
+
+  &.btn-white {
+    background-color: var(--white);
+    border-color: var(--black);
+    .mdc-button__label,
+    mat-icon {
+      color: var(--black);
+    }
+    &:hover {
+      background-color: var(--black);
+      border-color: var(--black);
+      .mdc-button__label,
+      mat-icon {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+// If theme is dark
+.theme-dark {
+  button.mdc-button,
+  a.mdc-button {
+    &.btn-secondary {
+      .mdc-button__label,
+      mat-icon {
+        color: var(--white);
+      }
+    }
+    &.btn-black {
+      background-color: var(--black);
+      border-color: var(--black);
+      .mdc-button__label,
+      mat-icon {
+        color: var(--white);
+      }
+      &:hover {
+        background-color: var(--white);
+        border-color: var(--white);
+
+        .mdc-button__label,
+        mat-icon {
+          color: var(--black);
+        }
+      }
+    }
+    &.btn-white {
+      border-color: var(--white);
+      &:hover {
+        border-color: var(--black);
+      }
+    }
+  }
+}

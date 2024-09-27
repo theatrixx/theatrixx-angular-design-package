@@ -1,0 +1,1 @@
+export function toggleTheme(){const t=document.body;t.classList.toggle("theme-dark"),t.classList.toggle("theme-light")}

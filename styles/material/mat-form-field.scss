@@ -1,0 +1,51 @@
+mat-form-field {
+  .mdc-text-field--filled {
+    transition: background-color $transition-time, opacity $transition-time;
+    &.mdc-text-field--disabled {
+      .mdc-text-field__input {
+        color: var(--color);
+        transition: color, $transition-time;
+      }
+    }
+    &:not(.mdc-text-field--disabled) {
+      transition: background-color $transition-time;
+      .mdc-line-ripple::after {
+        border-bottom-color: var(--primary);
+      }
+      .mdc-text-field__input {
+        caret-color: var(--primary);
+        transition: color $transition-time;
+      }
+    }
+  }
+}
+
+// If theme is dark
+.theme-dark {
+  mat-form-field {
+    .mdc-text-field--filled {
+      &.mdc-text-field--disabled {
+        background-color: var(--secondaryLight);
+        opacity: 0.3;
+        .mdc-floating-label {
+          color: var(--grayLight);
+          transition: color $transition-time;
+        }
+      }
+      &:not(.mdc-text-field--disabled) {
+        background-color: var(--secondaryLight);
+        .mdc-line-ripple::after {
+          border-bottom-color: var(--tertiary);
+        }
+        .mdc-text-field__input {
+          caret-color: var(--tertiary);
+          color: var(--tertiary);
+        }
+        .mdc-line-ripple::before,
+        &:not(.mdc-text-field--focused):hover .mdc-line-ripple::before {
+          border-bottom-color: var(--grayDark);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.mdc-switch__icons {
+  display: none;
+}
+mat-slide-toggle {
+  .mdc-switch__track::after,
+  .mdc-switch:enabled:active .mdc-switch__track::after,
+  .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after,
+  .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after {
+    background: var(--primary);
+  }
+  label {
+    color: var(--color);
+    transition: color $transition-time;
+  }
+}

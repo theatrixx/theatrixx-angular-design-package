@@ -1,0 +1,24 @@
+mat-form-field {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused
+    .mdc-floating-label {
+    color: var(--primary);
+  }
+}
+
+.theme-dark {
+  mat-form-field {
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      &:not(.mdc-text-field--focused):hover .mdc-floating-label {
+        color: var(--gray);
+      }
+      &.mdc-text-field--focused {
+        .mdc-floating-label {
+          color: var(--tertiary);
+        }
+      }
+      .mdc-floating-label {
+        color: var(--gray);
+      }
+    }
+  }
+}

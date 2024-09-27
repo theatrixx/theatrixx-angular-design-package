@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass index.scss dist/index.css --style=compressed",
-    "watch": "sass index.scss dist/index.css --style=compressed --watch"
+    "build": "copyfiles -u 5 node_modules/@theatrixx123/theatrixx-design/dist/fonts/**/* dist/fonts && copyfiles -u 4 node_modules/@theatrixx123/theatrixx-design/dist/index.js dist/ && sass index.scss dist/index.css --style=compressed",
+    "watch": "copyfiles -u 5 node_modules/@theatrixx123/theatrixx-design/dist/fonts/**/* dist/fonts && copyfiles -u 4 node_modules/@theatrixx123/theatrixx-design/dist/index.js dist/ && sass index.scss dist/index.css --style=compressed --watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/EdouardTheatrixx/theatrixx-angular-design-package#readme",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "sass": "^1.78.0"
   }
 }

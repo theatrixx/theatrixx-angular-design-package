@@ -1,0 +1,8 @@
+.cdk-overlay-container {
+  div.mat-mdc-autocomplete-panel {
+    padding: 0;
+    .mat-mdc-option {
+      padding: 0 0.5rem;
+    }
+  }
+}
