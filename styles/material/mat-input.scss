@@ -21,6 +21,7 @@ mat-datepicker-content.mat-datepicker-content {
     background-color: transparent;
     color: var(--color);
   }
+  .mat-datepicker-actions button,
   .mat-calendar-period-button {
     background-color: var(--secondary);
     &:hover {
@@ -65,6 +66,7 @@ mat-datepicker-content.mat-datepicker-content {
     .mat-calendar-body-label {
       color: var(--color);
     }
+    .mat-datepicker-actions button,
     .mat-calendar-period-button {
       background-color: var(--color);
       &:hover {
