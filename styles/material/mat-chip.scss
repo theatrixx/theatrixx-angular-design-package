@@ -1,0 +1,57 @@
+.mat-mdc-chip {
+  &.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
+    .mdc-evolution-chip__text-label {
+      color: var(--color);
+      transition: color $transition-time;
+    }
+    .mdc-evolution-chip__action--primary::before {
+      border-color: var(--color);
+      transition: border-color $transition-time;
+    }
+  }
+
+  .mat-mdc-chip-remove {
+    &:hover {
+      background-color: transparent;
+    }
+    .mat-icon {
+      color: var(--color);
+      transition: color $transition-time;
+    }
+  }
+  &.mat-mdc-standard-chip {
+    &.mdc-evolution-chip--with-primary-graphic {
+      .mdc-evolution-chip__graphic {
+        width: auto;
+      }
+    }
+    &.mdc-evolution-chip--disabled {
+      .mdc-evolution-chip__action--primary {
+        .mat-mdc-chip-action-label {
+          color: var(--gray);
+        }
+        &::before {
+          border-color: var(--gray);
+        }
+      }
+    }
+    &.mdc-evolution-chip--selected:not(.mdc-evolution-chip--disabled) {
+      background-color: var(--color);
+      transition: background-color $transition-time;
+      .mdc-evolution-chip__action:hover {
+        background-color: var(--color);
+      }
+      .mdc-evolution-chip__text-label {
+        color: var(--background);
+        transition: color $transition-time;
+      }
+      .mdc-evolution-chip__checkmark {
+        color: var(--background);
+        transition: color $transition-time;
+      }
+      .mdc-evolution-chip__checkmark {
+        display: none;
+      }
+    }
+  }
+}

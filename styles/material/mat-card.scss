@@ -1,0 +1,11 @@
+mat-card {
+  &.mat-mdc-card-outlined {
+    border-radius: 10px;
+    background-color: var(--background);
+    transition: background-color 0.3s;
+  }
+  .mat-mdc-card-title {
+    font-family: var(--font-family);
+    font-weight: 600;
+  }
+}

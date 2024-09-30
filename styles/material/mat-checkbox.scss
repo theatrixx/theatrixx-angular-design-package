@@ -1,0 +1,47 @@
+mat-checkbox {
+  .mdc-checkbox {
+    .mdc-checkbox__background,
+    .mdc-checkbox__native-control:focus:focus:not(:checked)
+      ~ .mdc-checkbox__background,
+    .mdc-checkbox__native-control:focus:focus:not(:indeterminate)
+      ~ .mdc-checkbox__background {
+      border-color: var(--color);
+    }
+    .mdc-checkbox__native-control:focus:focus:checked
+      ~ .mdc-checkbox__background,
+    .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+    .mdc-checkbox__native-control:enabled:indeterminate
+      ~ .mdc-checkbox__background {
+      border-color: var(--primary);
+      background-color: var(--primary);
+    }
+    &:hover {
+      .mdc-checkbox__native-control:not(:checked) ~ .mdc-checkbox__background,
+      .mdc-checkbox:hover
+        .mdc-checkbox__native-control:not(:indeterminate)
+        ~ .mdc-checkbox__background {
+        border-color: var(--color);
+      }
+      .mdc-checkbox__native-control[aria-checked="mixed"]
+        ~ .mdc-checkbox__background {
+        border-color: var(--primary);
+      }
+    }
+  }
+  .mdc-label {
+    color: var(--color);
+    transition: color $transition-time;
+  }
+}
+.mat-mdc-checkbox.mat-mdc-checkbox-disabled {
+  .mdc-checkbox__background {
+    border-color: var(--gray);
+  }
+  .mdc-label {
+    color: var(--gray);
+  }
+  .mdc-checkbox__native-control:disabled:checked ~ .mdc-checkbox__background {
+    border-color: var(--grayDark);
+    background-color: var(--grayDark);
+  }
+}
