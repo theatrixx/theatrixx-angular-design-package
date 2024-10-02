@@ -1,0 +1,44 @@
+mat-list.mat-mdc-list,
+mat-nav-list.mat-mdc-nav-list,
+mat-action-list.mat-mdc-action-list,
+mat-selection-list.mat-mdc-selection-list {
+  .mdc-list-item {
+    &::before {
+      opacity: 0;
+      background-color: transparent;
+    }
+    .mat-ripple-element {
+      display: none;
+    }
+    &:focus .mdc-list-item__primary-text,
+    &:hover .mdc-list-item__primary-text,
+    &__primary-text {
+      color: var(--color);
+      transition: color $transition-time;
+    }
+  }
+  .mat-mdc-list-option {
+    .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+    .mdc-checkbox__native-control:enabled:indeterminate
+      ~ .mdc-checkbox__background {
+      border-color: var(--primary);
+      background-color: var(--primary);
+    }
+    .mdc-checkbox__background {
+      border-color: var(--color);
+    }
+
+    .mdc-checkbox:hover
+      .mdc-checkbox__native-control:not(:checked)
+      ~ .mdc-checkbox__background,
+    .mdc-checkbox:hover
+      .mdc-checkbox__native-control:not(:indeterminate)
+      ~ .mdc-checkbox__background {
+      border-color: var(--color);
+    }
+  }
+}
+
+.mdc-list-item:hover span.mdc-list-item__primary-text {
+  color: var(--color);
+}

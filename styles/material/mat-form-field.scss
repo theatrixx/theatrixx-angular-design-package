@@ -1,5 +1,11 @@
 mat-form-field {
-  .mdc-text-field--filled {
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input,
+  .mdc-text-field:not(.mdc-text-field--disabled)
+    textarea.mdc-text-field__input {
+    color: var(--color);
+    transition: color $transition-time;
+  }
+  .mdc-text-field {
     transition: background-color $transition-time, opacity $transition-time;
     &.mdc-text-field--disabled {
       .mdc-text-field__input {
@@ -16,7 +22,101 @@ mat-form-field {
         caret-color: var(--primary);
         transition: color $transition-time;
       }
+      &.mdc-text-field--invalid:not(.mdc-text-field--disabled):hover
+        .mdc-floating-label {
+        color: var(--gray);
+      }
     }
+  }
+  &.mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
+    color: var(--primary);
+  }
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+    .mdc-text-field__input {
+      caret-color: var(--primary);
+    }
+    &.mdc-text-field--focused {
+      .mat-mdc-notch-piece {
+        border-color: var(--primary);
+      }
+      .mdc-floating-label {
+        color: var(--primary);
+      }
+    }
+    &:not(.mdc-text-field--focused) {
+      .mat-mdc-notch-piece {
+        transition: border-color $transition-time;
+      }
+    }
+  }
+}
+/* Mat-select */
+mat-select.mat-mdc-select {
+  color: var(--color);
+  transition: color $transition-time;
+}
+.cdk-overlay-pane:not(.mat-mdc-select-panel-above) div.mat-mdc-select-panel {
+  background-color: var(--background);
+}
+mat-option.mat-mdc-option {
+  &.mdc-list-item--selected:not(.mdc-list-item--disabled):not(
+      .mat-mdc-option-multiple
+    ) {
+    background-color: hsla(var(--primaryHSL), 0.1);
+  }
+  .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after {
+    color: var(--primary);
+  }
+  &.mdc-list-item--selected:not(.mdc-list-item--disabled)
+    .mdc-list-item__primary-text,
+  .mdc-list-item__primary-text {
+    color: var(--color);
+  }
+}
+
+/* Mat-radio */
+mat-radio-button.mat-mdc-radio-button {
+  .mat-internal-form-field {
+    color: var(--color);
+    transition: color $transition-time;
+  }
+  .mdc-radio:hover
+    .mdc-radio__native-control:not([disabled])
+    ~ .mdc-radio__background
+    .mdc-radio__outer-circle,
+  .mdc-radio__native-control:enabled:not(:checked)
+    + .mdc-radio__background
+    .mdc-radio__outer-circle {
+    border-color: var(--color);
+  }
+
+  .mdc-radio__native-control:enabled:checked
+    + .mdc-radio__background
+    .mdc-radio__outer-circle,
+  .mdc-radio__native-control:enabled:checked
+    + .mdc-radio__background
+    .mdc-radio__inner-circle,
+  .mdc-radio__native-control:enabled:focus:checked
+    + .mdc-radio__background
+    .mdc-radio__inner-circle,
+  .mdc-radio__native-control:enabled:focus:checked
+    + .mdc-radio__background
+    .mdc-radio__outer-circle,
+  .mdc-radio:hover
+    .mdc-radio__native-control:enabled:checked
+    + .mdc-radio__background
+    .mdc-radio__outer-circle,
+  .mdc-radio:hover
+    .mdc-radio__native-control:enabled:checked
+    + .mdc-radio__background
+    .mdc-radio__inner-circle,
+  .mdc-radio__native-control:enabled:focus:checked
+    + .mdc-radio__background
+    .mdc-radio__inner-circle,
+  .mdc-radio__native-control:enabled:focus:checked
+    + .mdc-radio__background
+    .mdc-radio__outer-circle {
+    border-color: var(--primary);
   }
 }
 
@@ -47,5 +147,30 @@ mat-form-field {
         }
       }
     }
+    &.mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
+      color: var(--color);
+    }
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+      .mdc-text-field__input {
+        caret-color: var(--color);
+      }
+      &.mdc-text-field--focused {
+        .mat-mdc-notch-piece {
+          border-color: var(--color);
+        }
+        .mdc-floating-label {
+          color: var(--color);
+        }
+      }
+      &:not(.mdc-text-field--focused) {
+        .mdc-floating-label {
+          color: var(--color);
+        }
+        .mat-mdc-notch-piece {
+          border-color: var(--color);
+        }
+      }
+    }
   }
 }
+// mat-form-field .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label

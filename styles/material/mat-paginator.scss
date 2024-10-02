@@ -1,0 +1,16 @@
+mat-paginator.mat-mdc-paginator {
+  background-color: transparent;
+  color: var(--color);
+  transition: color $transition-time;
+  .mat-mdc-paginator-icon {
+    fill: var(--color);
+    transition: fill $transition-time;
+  }
+}
+.mdc-icon-button.mat-mdc-icon-button[disabled],
+.mat-mdc-icon-button.mat-mdc-button-disabled {
+  color: var(--gray);
+  .mat-mdc-paginator-icon {
+    fill: var(--gray);
+  }
+}

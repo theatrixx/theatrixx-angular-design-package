@@ -1,0 +1,16 @@
+mat-sidenav-container,
+mat-drawer-container {
+  &.mat-drawer-container {
+    background-color: transparent;
+    color: var(--color);
+    transition: color $transition-time;
+  }
+}
+mat-sidenav,
+mat-drawer {
+  &.mat-drawer {
+    background-color: transparent;
+    color: var(--color);
+    transition: color $transition-time;
+  }
+}

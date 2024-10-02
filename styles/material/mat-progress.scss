@@ -1,0 +1,19 @@
+mat-progress-bar {
+  .mdc-linear-progress__bar-inner {
+    border-color: var(--primary);
+  }
+}
+.mat-mdc-progress-spinner {
+  svg {
+    &.mdc-circular-progress__determinate-circle,
+    &.mdc-circular-progress__indeterminate-circle-graphic {
+      stroke: var(--primary);
+    }
+  }
+  circle {
+    &.mdc-circular-progress__determinate-circle,
+    &.mdc-circular-progress__indeterminate-circle-graphic {
+      stroke: var(--primary);
+    }
+  }
+}

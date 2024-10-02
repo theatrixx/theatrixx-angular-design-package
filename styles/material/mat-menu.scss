@@ -1,0 +1,10 @@
+.mat-mdc-menu-panel {
+  &.mat-elevation-z2,
+  .mat-mdc-elevation-specific.mat-elevation-z2 {
+    background-color: var(--background);
+    .mat-mdc-menu-content,
+    .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text {
+      color: var(--color);
+    }
+  }
+}
