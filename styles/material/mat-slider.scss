@@ -1,0 +1,16 @@
+mat-slider {
+  .mdc-slider__track--active_fill {
+    border-color: var(--primary);
+  }
+  .mdc-slider__thumb-knob,
+  .mdc-slider__thumb--focused .mdc-slider__thumb-knob {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  .mdc-slider__track--inactive {
+    background-color: var(--gray);
+  }
+  .mdc-slider__value-indicator {
+    background-color: var(--primary);
+  }
+}

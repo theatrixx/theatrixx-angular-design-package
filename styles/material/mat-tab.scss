@@ -1,0 +1,14 @@
+mat-tab-header {
+  .mat-mdc-tab .mdc-tab__text-label,
+  .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label,
+  .mat-mdc-tab.mdc-tab:focus .mdc-tab__text-label,
+  .mat-mdc-tab.mdc-tab:hover .mdc-tab__text-label {
+    color: var(--color);
+    transition: color $transition-time;
+  }
+  .mdc-tab-indicator .mdc-tab-indicator__content,
+  .mat-mdc-tab.mdc-tab--active:hover .mdc-tab-indicator__content--underline,
+  .mat-mdc-tab.mdc-tab--active:focus .mdc-tab-indicator__content--underline {
+    border-color: var(--primary);
+  }
+}

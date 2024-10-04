@@ -1,0 +1,5 @@
+mat-toolbar.mat-toolbar {
+  background-color: transparent;
+  color: var(--color);
+  transition: color $transition-time;
+}

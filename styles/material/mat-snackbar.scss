@@ -1,0 +1,9 @@
+.theme-dark {
+  mat-snack-bar-container.mat-mdc-snack-bar-container {
+    .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

@@ -3,6 +3,9 @@
   .mat-date-range-input-separator {
     color: var(--color);
   }
+  .mat-date-range-input-inner {
+    border: none;
+  }
 }
 .mat-datepicker-toggle {
   button {

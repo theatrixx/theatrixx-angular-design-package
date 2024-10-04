@@ -1,0 +1,10 @@
+table {
+  &.mat-mdc-table {
+    background-color: transparent;
+    .mat-mdc-header-row,
+    .mat-mdc-row {
+      color: var(--color);
+      transition: color $transition-time;
+    }
+  }
+}

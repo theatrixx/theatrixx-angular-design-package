@@ -1,0 +1,20 @@
+mat-stepper {
+  .mat-step-icon {
+    background-color: var(--color);
+    color: var(--background);
+    transition: color $transition-time, background-color $transition-time;
+  }
+  &.mat-stepper-horizontal,
+  &.mat-stepper-vertical {
+    background: transparent;
+    .mat-step-icon-selected,
+    .mat-step-icon-state-edit {
+      background: var(--primary);
+      color: var(--tertiary);
+    }
+    .mat-step-label.mat-step-label-active {
+      color: var(--color);
+      transition: color $transition-time;
+    }
+  }
+}
