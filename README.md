@@ -18,3 +18,13 @@ import the style in your angular.json
 `"styles": [ "node_modules/@theatrixx123/angular-package/dist/index.css", "src/styles.scss"],`
 
 Start your angular application
+
+## Installation
+
+Make sure you already installed the @theatrixx123/theatrixx-design package
+
+`npm install git+https://github.com/theatrixx/theatrixx-angular-design-package.git`
+
+import the style in your angular.json
+
+`"styles": [ "node_modules/@theatrixx123/angular-package/dist/index.css", ...],`
