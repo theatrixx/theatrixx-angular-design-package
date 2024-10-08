@@ -151,11 +151,11 @@ button.mdc-button {
     &:hover {
       background-color: var(--tertiary);
       border-color: var(--color);
+      opacity: 0.8;
       .mdc-button__label,
       mat-icon {
         color: var(--secondary);
       }
-      opacity: 0.8;
     }
   }
 

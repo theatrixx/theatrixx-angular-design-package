@@ -32,7 +32,7 @@ mat-button-toggle-group {
         .mat-button-toggle-label-content {
           color: var(--background);
           transition: color $transition-time;
-          padding: var(--buttonn-padding);
+          padding: var(--button-padding);
           font-size: var(--button-font-size);
         }
         button {
