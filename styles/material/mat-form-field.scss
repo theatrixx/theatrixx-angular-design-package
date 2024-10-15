@@ -1,4 +1,7 @@
 mat-form-field {
+  input {
+    border: none;
+  }
   .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input,
   .mdc-text-field:not(.mdc-text-field--disabled)
     textarea.mdc-text-field__input {
