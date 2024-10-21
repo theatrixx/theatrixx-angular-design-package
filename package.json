@@ -1,16 +1,16 @@
 {
-  "name": "@theatrixx123/angular-package",
+  "name": "@theatrixx/angular-package",
   "version": "1.0.0",
   "description": "Angular design for theatrixx",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "copyfiles -u 5 node_modules/@theatrixx123/theatrixx-design/dist/fonts/**/* dist/fonts && copyfiles -u 4 node_modules/@theatrixx123/theatrixx-design/dist/index.js dist/ && sass index.scss dist/index.css --style=compressed",
-    "watch": "copyfiles -u 5 node_modules/@theatrixx123/theatrixx-design/dist/fonts/**/* dist/fonts && copyfiles -u 4 node_modules/@theatrixx123/theatrixx-design/dist/index.js dist/ && sass index.scss dist/index.css --style=compressed --watch"
+    "build": "copyfiles -u 5 node_modules/@theatrixx/theatrixx-design/dist/fonts/**/* dist/fonts && copyfiles -u 4 node_modules/@theatrixx/theatrixx-design/dist/index.js dist/ && sass index.scss dist/index.css --style=compressed",
+    "watch": "copyfiles -u 5 node_modules/@theatrixx/theatrixx-design/dist/fonts/**/* dist/fonts && copyfiles -u 4 node_modules/@theatrixx/theatrixx-design/dist/index.js dist/ && sass index.scss dist/index.css --style=compressed --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EdouardTheatrixx/theatrixx-angular-design-package.git"
+    "url": "git+https://github.com/theatrixx/theatrixx-angular-design-package.git"
   },
   "keywords": [
     "angular-theatrixx-design"
@@ -18,11 +18,12 @@
   "author": "Theatrixx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EdouardTheatrixx/theatrixx-angular-design-package/issues"
+    "url": "https://github.com/theatrixx/theatrixx-angular-design-package/issues"
   },
-  "homepage": "https://github.com/EdouardTheatrixx/theatrixx-angular-design-package#readme",
+  "homepage": "https://github.com/theatrixx/theatrixx-angular-design-package#readme",
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "sass": "^1.78.0"
-  }
+  },
+  "private": true
 }
