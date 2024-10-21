@@ -21,6 +21,9 @@
     "url": "https://github.com/theatrixx/theatrixx-angular-design-package/issues"
   },
   "homepage": "https://github.com/theatrixx/theatrixx-angular-design-package#readme",
+  "dependencies": {
+    "@theatrixx/theatrixx-design": "^1.0.1"
+  },
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "sass": "^1.78.0"
