@@ -27,5 +27,8 @@
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "sass": "^1.78.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
