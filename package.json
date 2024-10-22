@@ -1,7 +1,7 @@
 {
-  "name": "@theatrixx/angular-package",
+  "name": "@theatrixx/frontend-framework",
   "version": "1.0.0",
-  "description": "Angular design for theatrixx",
+  "description": "Material design for theatrixx",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/theatrixx/theatrixx-angular-design-package.git"
   },
   "keywords": [
-    "angular-theatrixx-design"
+    "material-theatrixx-design-frontend-framework"
   ],
   "author": "Theatrixx",
   "license": "MIT",
